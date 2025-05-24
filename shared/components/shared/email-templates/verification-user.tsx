@@ -11,7 +11,9 @@ export const VerificationUserTemplate: React.FC<Props> = ({ code }) => (
     </p>
 
     <p>
-      <a href={`http://localhost:3000/api/auth/verify?code=${code}`}>
+      <a
+        href={`${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/verify?code=${code}`}
+      >
         Підтвердіть реєстрацію
       </a>
     </p>
